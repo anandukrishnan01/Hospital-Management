@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}Booking{% endblock %}
+{% block content %} 
+<div style="margin-left: 6%; margin-top: 5%; margin-bottom: 5%;">
+    <h1 style="color: tomato; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Make An Appoiment</h1>
+    <hr style="border: .5px solid black; margin-right: 60%; ">
+</div>
+<div class="container w-50 text-center my-4 m" style=" border-radius: 1%; ">
+    <form action="" method="POST" style="text-align: left; width: 75%;">
+        {% csrf_token %}
+        {{form|crispy}}
+        <br>
+        <button class="btn btn-outline-dark btn-light mb-4" type="submit">Submit</button>
+    </form>
+</div>
+{% endblock %}

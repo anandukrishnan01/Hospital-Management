@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}{% endblock  %}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="https://www.pngfind.com/pngs/m/65-651785_hospital-icon-png-transparent-png.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static '/css/style.css'%}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  </head>
+  <body>
+    <!-- <style>
+      
+      a:hover{
+        color: black !important;
+      }
+    </style> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-danger navbar-expand-md navbar-light pt-4 pb-1 h-100 ">
+      <ul></ul>
+    </nav>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-expand-md navbar-light pt- pb-1 sticky-top">
+      <div class="text-left pl-md-0">
+          
+          <img src="{% static '/images/kmctloho.jpg'%}" alt="" style="height:%; width: 70%; ">
+        </div>
+      <div class="container">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>  
+        <div class="collapse navbar-collapse justify-content-end  navbar-collapse-3 col-md-8 my-2"  id="navbarSupportedContent">
+          <ul class="navbar-nav" style="margin-bottom: -20px; margin-right: -360px;  align-items: flex-end;" >
+            <li class="nav-item">
+              <a class="nav-link text-dark extra" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark extra" href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark extra" href="{% url 'booking' %}">Booking</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark extra" href="{% url 'doctors' %}">Doctors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark extra" href="{% url 'department' %}">Departments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark extra" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+
+
+  {% block content %}{% endblock %} 
+
+
+    <section class="">
+      <footer class="pt-2 pb-2   bg-secondary text-light">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12 col-md-8">
+              <h5>Emergency Contact Number:  +91 495 2295087</h5>
+            </div>
+            <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-end ">
+              Copyright ©2022 . All rights reserved | Powered by Datastone Solutions
+              <a class="text-light" href="#">Privacy Policy</a> 
+
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html> 
